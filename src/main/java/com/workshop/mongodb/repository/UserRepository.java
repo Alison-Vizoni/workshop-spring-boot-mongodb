@@ -1,4 +1,4 @@
-package com.workshop.mongodb.Repository;
+package com.workshop.mongodb.repository;
 
 import com.workshop.mongodb.domain.User;
 import org.springframework.data.mongodb.repository.MongoRepository;

@@ -1,6 +1,6 @@
 package com.workshop.mongodb.config;
 
-import com.workshop.mongodb.Repository.UserRepository;
+import com.workshop.mongodb.repository.UserRepository;
 import com.workshop.mongodb.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
