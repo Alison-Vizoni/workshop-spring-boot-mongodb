@@ -1,6 +1,7 @@
 package com.workshop.mongodb.config;
 
 import com.workshop.mongodb.domain.Post;
+import com.workshop.mongodb.dto.AuthorDTO;
 import com.workshop.mongodb.repository.PostRepository;
 import com.workshop.mongodb.repository.UserRepository;
 import com.workshop.mongodb.domain.User;
@@ -34,10 +35,11 @@ public class Instantiation implements CommandLineRunner {
         User mario = new User("Mario", "mario@example");
         User ana = new User("Ana", "ana@example");
 
-        Post post = new Post(dateFormat.parse("21/03/2020"), "Partiu Viajar", "Vou viajar para Rio de Janeiro. Abraços!", mario);
-        Post post_2 = new Post(dateFormat.parse("23/05/2020"), "Bom dia", "Acordei feliz hoje!", mario);
-
         userRepository.saveAll(Arrays.asList(alex, mario, ana));
+
+        Post post = new Post(dateFormat.parse("21/03/2020"), "Partiu Viajar", "Vou viajar para Rio de Janeiro. Abraços!", new AuthorDTO(mario));
+        Post post_2 = new Post(dateFormat.parse("23/05/2020"), "Bom dia", "Acordei feliz hoje!", new AuthorDTO(mario));
+
         postRepository.saveAll(Arrays.asList(post, post_2));
     }
 }
