@@ -1,5 +1,6 @@
 package com.workshop.mongodb.config;
 
+import com.workshop.mongodb.domain.CommentDTO;
 import com.workshop.mongodb.domain.Post;
 import com.workshop.mongodb.dto.AuthorDTO;
 import com.workshop.mongodb.repository.PostRepository;
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.List;
 import java.util.TimeZone;
 
 @Configuration
@@ -39,6 +41,13 @@ public class Instantiation implements CommandLineRunner {
 
         Post post = new Post(dateFormat.parse("21/03/2020"), "Partiu Viajar", "Vou viajar para Rio de Janeiro. Abraços!", new AuthorDTO(mario));
         Post post_2 = new Post(dateFormat.parse("23/05/2020"), "Bom dia", "Acordei feliz hoje!", new AuthorDTO(mario));
+
+        CommentDTO commentDTO = new CommentDTO("Boa viajem!", dateFormat.parse("21/03/2020"), new AuthorDTO(alex));
+        CommentDTO commentDTO_2 = new CommentDTO("Aproveite :)", dateFormat.parse("22/03/2020"), new AuthorDTO(ana));
+        CommentDTO commentDTO_3 = new CommentDTO("Tenha um ótimo dia!", dateFormat.parse("23/03/2020"), new AuthorDTO(alex));
+
+        post.getComments().addAll(Arrays.asList(commentDTO, commentDTO_2));
+        post_2.getComments().addAll(List.of(commentDTO_3));
 
         postRepository.saveAll(Arrays.asList(post, post_2));
 
