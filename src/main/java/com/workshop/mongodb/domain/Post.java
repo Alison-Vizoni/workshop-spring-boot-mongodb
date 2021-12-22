@@ -1,6 +1,7 @@
 package com.workshop.mongodb.domain;
 
 import com.workshop.mongodb.dto.AuthorDTO;
+import com.workshop.mongodb.dto.CommentDTO;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

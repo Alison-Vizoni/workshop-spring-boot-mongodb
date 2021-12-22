@@ -1,4 +1,4 @@
-package com.workshop.mongodb.domain;
+package com.workshop.mongodb.dto;
 
 import com.workshop.mongodb.dto.AuthorDTO;
 

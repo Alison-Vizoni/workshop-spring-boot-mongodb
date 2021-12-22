@@ -92,14 +92,75 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/posts",
+					"raw": "http://localhost:8080/posts/61c1cb2ca96cc5029f22322f",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"posts"
+						"posts",
+						"61c1cb2ca96cc5029f22322f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find post by title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/posts/titlesearch?text=bom%20dia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"titlesearch"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "bom%20dia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find post by text minDate maxDate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/posts/titlesearch?text=aproveite&minDate=2020-03-19&maxDate=2020-03-30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"titlesearch"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "aproveite"
+						},
+						{
+							"key": "minDate",
+							"value": "2020-03-19"
+						},
+						{
+							"key": "maxDate",
+							"value": "2020-03-30"
+						}
 					]
 				}
 			},

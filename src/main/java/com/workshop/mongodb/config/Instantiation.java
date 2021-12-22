@@ -1,6 +1,6 @@
 package com.workshop.mongodb.config;
 
-import com.workshop.mongodb.domain.CommentDTO;
+import com.workshop.mongodb.dto.CommentDTO;
 import com.workshop.mongodb.domain.Post;
 import com.workshop.mongodb.dto.AuthorDTO;
 import com.workshop.mongodb.repository.PostRepository;
